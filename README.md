@@ -5,6 +5,16 @@
     - file system
     - system clock
 
+# Specification
+- input
+    - command line argument
+    - specifies the name of a file
+- behavior
+    - load the target from the file in utf-8
+    - compose a greeting message that says hello to the target
+    - display the greeting message to the console
+    - display the time taken in milliseconds to the console
+
 # Tests should be both deterministic and fast 
 - deterministic
     - we only access what the code can directly control
