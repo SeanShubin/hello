@@ -12,7 +12,9 @@ class TimerTest extends FunSuite {
     val doNothingBlock: () => Unit = () => {}
 
     //when
-    val duration = timer.measureTime(doNothingBlock())
+    val duration = timer.measureTime {
+      doNothingBlock()
+    }
 
     //then
     assert(duration === Duration.ofMillis(234))
