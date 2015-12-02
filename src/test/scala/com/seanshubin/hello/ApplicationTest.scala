@@ -11,7 +11,7 @@ class ApplicationTest extends FunSuite {
   test("application deep test") {
     //given
     val wiring = new DeterministicWiring {
-      override def theCommandLineArguments = Seq("my-configuration.txt")
+      override def commandLineArguments = Seq("my-configuration.txt")
 
       override def clockTimes: Seq[Long] = Seq(1000, 1789)
 
