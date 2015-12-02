@@ -5,7 +5,7 @@
     - file system
     - system clock
 
-# Most tests should be both deterministic and fast 
+# Tests should be both deterministic and fast 
 - deterministic
     - we only access what the code can directly control
     - we do not access
