@@ -14,5 +14,5 @@ trait Wiring {
   lazy val clock: Clock = Clock.systemUTC()
   lazy val timer: Timer = new TimerImpl(clock)
   lazy val greeter: Greeter = new GreeterImpl(emitLine)
-  lazy val runner: Runnable = new RunnerImpl(configuration, greeter, timer, notifications)
+  lazy val application: Runnable = new ApplicationImpl(configuration, greeter, timer, notifications)
 }
