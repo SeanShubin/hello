@@ -5,6 +5,10 @@
     - file system
     - system clock
 
+# Steps to run
+- mvn package
+- java -jar target/hello.jar configuration.txt
+
 # Specification
 - input
     - command line argument

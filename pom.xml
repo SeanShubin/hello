@@ -7,12 +7,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>onejar</id>
-            <url>http://onejar-maven-plugin.googlecode.com/svn/mavenrepo</url>
-        </pluginRepository>
-    </pluginRepositories>
     <dependencies>
         <dependency>
             <groupId>com.seanshubin.devon</groupId>
@@ -99,22 +93,23 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.dstovall</groupId>
-                <artifactId>onejar-maven-plugin</artifactId>
-                <version>1.4.5</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.4.3</version>
                 <executions>
                     <execution>
-                        <configuration>
-                            <mainClass>com.seanshubin.hello.ConsoleApplication</mainClass>
-                            <filename>hello.jar</filename>
-                            <manifestEntries>
-                                <One-Jar-URL-Factory>com.simontuffs.onejar.JarClassLoader$OneJarURLFactory
-                                </One-Jar-URL-Factory>
-                            </manifestEntries>
-                        </configuration>
+                        <phase>package</phase>
                         <goals>
-                            <goal>one-jar</goal>
+                            <goal>shade</goal>
                         </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.seanshubin.hello.ConsoleApplication</mainClass>
+                                </transformer>
+                            </transformers>
+                            <finalName>hello</finalName>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
