@@ -14,5 +14,5 @@ abstract class DeterministicWiring extends Wiring {
 
   override lazy val files: FilesContract = filesStub
 
-  override lazy val clock: Clock = new ClockStub(clockTimes)
+  override lazy val clock: Clock = new PredeterminedClockStub(clockTimes)
 }
