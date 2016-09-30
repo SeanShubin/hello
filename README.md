@@ -20,11 +20,11 @@
     - display the time taken in milliseconds to the console
 
 ## Prototype
-- [prototype application without test coverage](src/test/scala/com/seanshubin/hello/PrototypeApp)
+- [prototype application without test coverage](blob/master/src/test/scala/com/seanshubin/hello/PrototypeApp)
 
 ## Test Driven
-- [unchanging, untested, entry point](src/main/scala/com/seanshubin/hello/ConsoleApplication)
-- [changeable, testable, implementation](src/main/scala/com/seanshubin/hello/ApplicationImpl)
+- [unchanging, untested, entry point](blob/master/src/main/scala/com/seanshubin/hello/ConsoleApplication)
+- [changeable, testable, implementation](blob/master/src/main/scala/com/seanshubin/hello/ApplicationImpl)
 
 ## Tests should be both deterministic and fast 
 - deterministic
