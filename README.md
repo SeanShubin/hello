@@ -5,11 +5,11 @@
     - file system
     - system clock
 
-# Steps to run
+## Steps to run
 - mvn package
 - java -jar target/hello.jar configuration.txt
 
-# Specification
+## Specification
 - input
     - command line argument
     - specifies the name of a file
@@ -19,7 +19,14 @@
     - display the greeting message to the console
     - display the time taken in milliseconds to the console
 
-# Tests should be both deterministic and fast 
+## Prototype
+- [prototype application without test coverage](src/test/scala/com/seanshubin/hello/PrototypeApp)
+
+## Test Driven
+- [unchanging, untested, entry point](src/main/scala/com/seanshubin/hello/ConsoleApplication)
+- [changeable, testable, implementation](src/main/scala/com/seanshubin/hello/ApplicationImpl)
+
+## Tests should be both deterministic and fast 
 - deterministic
     - we only access what the code can directly control
     - we do not access
