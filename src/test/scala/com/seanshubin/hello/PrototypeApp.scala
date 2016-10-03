@@ -1,21 +1,13 @@
 package com.seanshubin.hello
 
-import java.nio.charset.{Charset, StandardCharsets}
+import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths}
 import java.time.{Clock, Duration}
 
 object PrototypeApp extends App {
-  val clock: Clock = Clock.systemUTC()
-  val charset: Charset = StandardCharsets.UTF_8
-
-  val before = clock.instant()
-
-  val configFilePath = Paths.get(args.head)
-  val bytes = Files.readAllBytes(configFilePath)
-  val target = new String(bytes, charset)
+  val startTime = Clock.systemUTC().instant()
+  val target = new String(Files.readAllBytes(Paths.get(args.head)), StandardCharsets.UTF_8)
   println(s"Hello, $target!")
-
-  val after = clock.instant()
-  val duration = Duration.between(before, after)
+  val duration = Duration.between(startTime, Clock.systemUTC().instant())
   println(s"${duration.toMillis} milliseconds")
 }
