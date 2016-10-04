@@ -1,8 +1,18 @@
 package com.seanshubin.hello.prototype
 
 import java.nio.charset.StandardCharsets
-import java.nio.file.{Files, Path, Paths}
+import java.nio.file.{Files, Paths}
 import java.time.{Clock, Duration}
+
+object PrototypeApp extends App {
+  val startTime = Clock.systemUTC().instant()
+  val target = new String(Files.readAllBytes(Paths.get(args.head)), StandardCharsets.UTF_8)
+  println(s"Hello, $target!")
+  val duration = Duration.between(startTime, Clock.systemUTC().instant())
+  println(s"${duration.toMillis} milliseconds")
+}
+
+/* final result
 
 object PrototypeApp extends App {
   new Wiring {
@@ -42,6 +52,8 @@ class Runner(args: Seq[String], clock: Clock, files: FilesContract, emit: String
     emit(s"$durationMillis milliseconds")
   }
 }
+
+*/
 
 /* create a contract to emit a line
 
