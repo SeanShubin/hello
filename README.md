@@ -1,11 +1,11 @@
 # Hello Sample
+- [YouTube](https://www.youtube.com/watch?v=b8EB31voC9U)
 - Sample project demonstrating how to test drive your non deterministic code
 - Non-determinism highlighted:
     - console output
     - file system
     - system clock
 
-## [YouTube](https://www.youtube.com/watch?v=b8EB31voC9U)
 
 ## Steps to run
 - mvn package
