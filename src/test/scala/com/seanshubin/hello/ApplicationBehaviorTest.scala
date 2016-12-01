@@ -4,7 +4,7 @@ import java.nio.charset.StandardCharsets
 
 import org.scalatest.FunSuite
 
-class ApplicationTest extends FunSuite {
+class ApplicationBehaviorTest extends FunSuite {
   test("application behavior test") {
     //given
     val args = Seq("configuration.txt")
