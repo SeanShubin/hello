@@ -2,7 +2,7 @@ package com.seanshubin.hello
 
 import java.time.{Clock, Instant, ZoneId}
 
-class PredeterminedClockStub(values: Seq[Long]) extends Clock {
+class ClockStub(values: Long*) extends Clock {
   private var valueIndex = 0
 
   override def getZone: ZoneId = ???
