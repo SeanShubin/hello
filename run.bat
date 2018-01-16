@@ -1,1 +1,1 @@
-java -jar target\hello.jar configuration.txt
+java -jar console\target\hello.jar configuration.txt

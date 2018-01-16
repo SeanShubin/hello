@@ -1,6 +1,8 @@
-package com.seanshubin.hello
+package com.seanshubin.hello.console
 
 import java.time.Clock
+
+import com.seanshubin.hello.domain.{ApplicationBehavior, FilesContract, FilesFromOperatingSystem}
 
 trait DependencyInjection {
   def args: Seq[String]

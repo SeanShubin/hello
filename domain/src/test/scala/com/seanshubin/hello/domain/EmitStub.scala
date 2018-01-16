@@ -1,4 +1,4 @@
-package com.seanshubin.hello
+package com.seanshubin.hello.domain
 
 import scala.collection.mutable.ArrayBuffer
 

@@ -1,4 +1,4 @@
-package com.seanshubin.hello
+package com.seanshubin.hello.console
 
 object EntryPoint extends App {
   new DependencyInjection {
