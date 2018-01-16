@@ -35,6 +35,7 @@
     <modules>
         <module>console</module>
         <module>domain</module>
+        <module>prototype</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

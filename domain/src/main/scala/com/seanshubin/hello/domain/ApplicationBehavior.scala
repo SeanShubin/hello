@@ -6,12 +6,6 @@ import java.time.{Clock, Duration}
 
 class ApplicationBehavior(args: Seq[String], clock: Clock, files: FilesContract, emit: String => Unit) extends Runnable {
   override def run(): Unit = {
-    //    val startTime = Clock.systemUTC().instant()
-    //    val target = new String(Files.readAllBytes(Paths.get(args.head)), StandardCharsets.UTF_8)
-    //    println(s"Hello, $target!")
-    //    val duration = Duration.between(startTime, Clock.systemUTC().instant())
-    //    println(s"${duration.toMillis} milliseconds")
-    //
     val startTime = clock.instant()
     val pathAsString = args.head
     val path = Paths.get(pathAsString)

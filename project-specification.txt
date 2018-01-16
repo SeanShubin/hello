@@ -23,11 +23,13 @@
   }
   global [scala-library scala-test]
   modules {
-    console [domain]
-    domain  []
+    console   [domain]
+    domain    []
+    prototype []
   }
   detangler [console]
   consoleEntryPoint {
-    console com.seanshubin.hello.console.EntryPoint
+    console   com.seanshubin.hello.console.EntryPoint
+    prototype com.seanshubin.hello.prototype.EntryPoint
   }
 }
