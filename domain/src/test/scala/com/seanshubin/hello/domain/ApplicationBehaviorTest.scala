@@ -8,13 +8,13 @@ class ApplicationBehaviorTest extends FunSuite {
     val args = Seq("configuration.txt")
     val clock = new ClockStub(1000, 1789)
     val files = new FilesStub(Map("configuration.txt" -> "world"))
-    val emit = new EmitStub
-    val applicationBehavior = new ApplicationBehavior(args, clock, files, emit)
+    val console = new ConsoleStub
+    val applicationBehavior = new ApplicationBehavior(args, clock, files, console)
 
     //when
     applicationBehavior.run()
 
     //then
-    assert(emit.emitted === Seq("Hello, world!", "789 milliseconds"))
+    assert(console.linesEmitted === Seq("Hello, world!", "789 milliseconds"))
   }
 }
