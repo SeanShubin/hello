@@ -23,11 +23,16 @@
 
 ## Prototype
                                                 
-- [prototype application without test coverage](src/test/scala/com/seanshubin/hello/PrototypeApp.scala)
+- [prototype application without test coverage](prototype/src/main/scala/com/seanshubin/hello/prototype/EntryPoint.scala)
 
 ## Test Driven
-- [unchanging, untested, entry point with no logic](src/main/scala/com/seanshubin/hello/EntryPoint.scala)
-- [changeable, testable, implementation](src/main/scala/com/seanshubin/hello/ApplicationBehavior.scala)
+- [unchanging, untested, entry point with no logic](console/src/main/scala/com/seanshubin/hello/console/EntryPoint.scala)
+- [changeable, testable, implementation](domain/src/main/scala/com/seanshubin/hello/domain/ApplicationBehavior.scala)
+
+## Types of tests
+- [functions](domain/src/test/scala/com/seanshubin/hello/domain/FilesStub.scala)
+- [unpredictable](domain/src/test/scala/com/seanshubin/hello/domain/ClockStub.scala)
+- [side effects](domain/src/test/scala/com/seanshubin/hello/domain/ConsoleStub.scala)
 
 ## Tests should be both deterministic and fast 
 - deterministic
