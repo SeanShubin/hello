@@ -29,7 +29,8 @@
 - [unchanging, untested, entry point with no logic](console/src/main/scala/com/seanshubin/hello/console/EntryPoint.scala)
 - [changeable, testable, implementation](domain/src/main/scala/com/seanshubin/hello/domain/ApplicationBehavior.scala)
 
-## Types of tests
+## Types of stubbing
+- [top level](domain/src/test/scala/com/seanshubin/hello/domain/ApplicationBehaviorTest.scala)
 - [functions](domain/src/test/scala/com/seanshubin/hello/domain/FilesStub.scala)
 - [unpredictable](domain/src/test/scala/com/seanshubin/hello/domain/ClockStub.scala)
 - [side effects](domain/src/test/scala/com/seanshubin/hello/domain/ConsoleStub.scala)
